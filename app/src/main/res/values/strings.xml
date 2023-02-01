@@ -13,4 +13,7 @@
     <string name="notes_cleared_message">All notes have been deleted</string>
     <string name="cancel_button_text">Cancel</string>
     <string name="delete_button_text">Delete</string>
+    <string name="dialog_confirm_delete">Are you sure you want to delete all notes?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.notesapp.fragments
+package com.example.notesapp.notes
 
 import android.content.Context
 import android.os.Bundle
@@ -56,6 +56,14 @@ class NotesFragment : Fragment() {
                     NotesFragmentDirections.actionNotesFragmentToNoteEditFragment(it)
                 )
                 notesViewModel.doneNavigating()
+            }
+        }
+
+        notesViewModel.showConfirmDeleteDialog.observe(viewLifecycleOwner) {
+            if (it) {
+                DeleteNotesDialogFragment(notesViewModel)
+                    .show(parentFragmentManager, "confirm_delete")
+                notesViewModel.doneShowingDeleteConfirmation()
             }
         }
 

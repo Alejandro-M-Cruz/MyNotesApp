@@ -1,4 +1,4 @@
-package com.example.notesapp.fragments
+package com.example.notesapp.notes
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -11,12 +11,16 @@ import kotlinx.coroutines.launch
 
 class NotesViewModel(private val database: NotesDatabaseDao) : ViewModel() {
     val notes: LiveData<List<Note>> = database.getAllNotes()
+
     private val _navigateToNoteEdit = MutableLiveData<Long?>()
-    val navigateToNoteEdit: LiveData<Long?>
-        get() = _navigateToNoteEdit
+    val navigateToNoteEdit: LiveData<Long?> = _navigateToNoteEdit
+
+    private val _showConfirmDeleteDialog = MutableLiveData<Boolean>()
+    val showConfirmDeleteDialog: LiveData<Boolean> = _showConfirmDeleteDialog
+
     private val _showNotesClearedMessage = MutableLiveData<Boolean>()
-    val showNotesClearedMessage: LiveData<Boolean>
-        get() = _showNotesClearedMessage
+    val showNotesClearedMessage: LiveData<Boolean> = _showNotesClearedMessage
+
     val clearButtonEnabled = Transformations.map(notes) { it.isNotEmpty() }
 
     fun addNote() {
@@ -25,6 +29,10 @@ class NotesViewModel(private val database: NotesDatabaseDao) : ViewModel() {
 
     fun editNote(noteId: Long) {
         _navigateToNoteEdit.value = noteId
+    }
+
+    fun onClickDelete() {
+        _showConfirmDeleteDialog.value = true
     }
 
     fun clearNotes() {
@@ -42,5 +50,9 @@ class NotesViewModel(private val database: NotesDatabaseDao) : ViewModel() {
 
     fun doneShowingNotesClearedMessage() {
         _showNotesClearedMessage.value = false
+    }
+
+    fun doneShowingDeleteConfirmation() {
+        _showConfirmDeleteDialog.value = false
     }
 }

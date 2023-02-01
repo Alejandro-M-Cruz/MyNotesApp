@@ -3,12 +3,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.NotesFragment">
+    tools:context=".notes.NotesFragment">
 
     <data>
         <variable
             name="notesViewModel"
-            type="com.example.notesapp.fragments.NotesViewModel" />
+            type="com.example.notesapp.notes.NotesViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,7 +47,7 @@
             android:layout_marginBottom="@dimen/normal_margin"
             android:contentDescription="@string/clear_notes_button_description"
             android:enabled="@{notesViewModel.clearButtonEnabled}"
-            android:onClick="@{() -> notesViewModel.clearNotes()}"
+            android:onClick="@{() -> notesViewModel.onClickDelete()}"
             android:src="@drawable/ic_clear"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

@@ -1,4 +1,4 @@
-package com.example.notesapp.fragments
+package com.example.notesapp.noteedit
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,12 +14,10 @@ class NoteEditViewModel(
 ) : ViewModel() {
 
     private val _navigateToNotes = MutableLiveData<Boolean>()
-    val navigateToNotes: LiveData<Boolean>
-        get() = _navigateToNotes
+    val navigateToNotes: LiveData<Boolean> = _navigateToNotes
 
     private var _note = MutableLiveData<Note>()
-    val note: LiveData<Note>
-        get() = _note
+    val note: LiveData<Note> = _note
 
     init { if (noteId != -1L) initNote() }
 

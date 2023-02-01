@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.notesapp.R
-import com.example.notesapp.fragments.NotesViewModel
+import com.example.notesapp.notes.NotesViewModel
 import com.example.notesapp.model.Note
 
 class ItemAdapter(

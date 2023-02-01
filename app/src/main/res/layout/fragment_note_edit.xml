@@ -3,12 +3,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".fragments.NoteEditFragment">
+    tools:context=".noteedit.NoteEditFragment">
 
     <data>
         <variable
             name="noteEditViewModel"
-            type="com.example.notesapp.fragments.NoteEditViewModel" />
+            type="com.example.notesapp.noteedit.NoteEditViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
