@@ -1,12 +1,12 @@
-package com.example.notesapp.notes
+package my.alejandromcruz.notesapp.notes
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.notesapp.database.NotesDatabaseDao
-import com.example.notesapp.model.Note
+import my.alejandromcruz.notesapp.database.NotesDatabaseDao
+import my.alejandromcruz.notesapp.model.Note
 import kotlinx.coroutines.launch
 
 class NotesViewModel(private val database: NotesDatabaseDao) : ViewModel() {

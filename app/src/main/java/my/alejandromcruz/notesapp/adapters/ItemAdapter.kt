@@ -1,4 +1,4 @@
-package com.example.notesapp.adapters
+package my.alejandromcruz.notesapp.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.notesapp.R
-import com.example.notesapp.notes.NotesViewModel
-import com.example.notesapp.model.Note
+import my.alejandromcruz.notesapp.R
+import my.alejandromcruz.notesapp.notes.NotesViewModel
+import my.alejandromcruz.notesapp.model.Note
 
 class ItemAdapter(
     private val context: Context,

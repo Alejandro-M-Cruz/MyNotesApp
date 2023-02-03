@@ -1,10 +1,10 @@
-package com.example.notesapp.database
+package my.alejandromcruz.notesapp.database
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.notesapp.model.Note
+import my.alejandromcruz.notesapp.model.Note
 
 @Database([Note::class], version = 1, exportSchema = false)
 abstract class NotesDatabase : RoomDatabase() {

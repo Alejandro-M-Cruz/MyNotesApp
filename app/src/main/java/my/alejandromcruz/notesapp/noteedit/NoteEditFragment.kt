@@ -1,4 +1,4 @@
-package com.example.notesapp.noteedit
+package my.alejandromcruz.notesapp.noteedit
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,9 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
-import com.example.notesapp.R
-import com.example.notesapp.database.NotesDatabase
-import com.example.notesapp.databinding.FragmentNoteEditBinding
+import my.alejandromcruz.notesapp.R
+import my.alejandromcruz.notesapp.database.NotesDatabase
+import my.alejandromcruz.notesapp.databinding.FragmentNoteEditBinding
 
 class NoteEditFragment : Fragment() {
     private lateinit var noteEditViewModel: NoteEditViewModel

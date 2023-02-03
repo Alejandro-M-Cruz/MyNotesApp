@@ -1,4 +1,4 @@
-package com.example.notesapp.notes
+package my.alejandromcruz.notesapp.notes
 
 import android.content.Context
 import android.os.Bundle
@@ -10,10 +10,10 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.notesapp.R
-import com.example.notesapp.adapters.ItemAdapter
-import com.example.notesapp.database.NotesDatabase
-import com.example.notesapp.databinding.FragmentNotesBinding
+import my.alejandromcruz.notesapp.R
+import my.alejandromcruz.notesapp.adapters.ItemAdapter
+import my.alejandromcruz.notesapp.database.NotesDatabase
+import my.alejandromcruz.notesapp.databinding.FragmentNotesBinding
 
 class NotesFragment : Fragment() {
     private lateinit var binding: FragmentNotesBinding

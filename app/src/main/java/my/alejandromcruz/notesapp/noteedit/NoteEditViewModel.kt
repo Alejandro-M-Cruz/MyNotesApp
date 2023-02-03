@@ -1,11 +1,12 @@
-package com.example.notesapp.noteedit
+package my.alejandromcruz.notesapp.noteedit
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.notesapp.database.NotesDatabaseDao
-import com.example.notesapp.model.Note
+import my.alejandromcruz.notesapp.database.NotesDatabaseDao
+import my.alejandromcruz.notesapp.model.Note
 import kotlinx.coroutines.launch
 
 class NoteEditViewModel(
@@ -16,17 +17,27 @@ class NoteEditViewModel(
     private val _navigateToNotes = MutableLiveData<Boolean>()
     val navigateToNotes: LiveData<Boolean> = _navigateToNotes
 
-    private var _note = MutableLiveData<Note>()
+    private val _note = MutableLiveData<Note>()
     val note: LiveData<Note> = _note
 
-    init { if (noteId != -1L) initNote() }
+    private val _deleteNoteVisible = MutableLiveData<Int>()
+    val deleteNoteVisible: LiveData<Int> = _deleteNoteVisible
+
+
+    init {
+        if (noteId != -1L) {
+            initNote()
+            _deleteNoteVisible.value = View.VISIBLE
+        } else _deleteNoteVisible.value = View.GONE
+    }
 
     private fun initNote() = viewModelScope.launch { _note.value = get(noteId) }
 
     fun editNote(title: String, content: String) {
         viewModelScope.launch {
-            if (noteId == -1L) insert(Note(title = title, content = content))
-            else {
+            if (noteId == -1L) {
+                insert(Note(title = title, content = content))
+            } else {
                 update(_note.value!!.apply {
                     this.title = title
                     this.content = content

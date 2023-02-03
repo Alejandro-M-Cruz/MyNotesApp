@@ -1,10 +1,10 @@
-package com.example.notesapp.notes
+package my.alejandromcruz.notesapp.notes
 
 import android.app.AlertDialog
 import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
-import com.example.notesapp.R
+import my.alejandromcruz.notesapp.R
 
 class DeleteNotesDialogFragment(private val viewModel: NotesViewModel) : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {

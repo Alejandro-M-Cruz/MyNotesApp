@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "712401282029",
+    "project_id": "notes-app-8c485",
+    "storage_bucket": "notes-app-8c485.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712401282029:android:538e96f8bd70e1f8fafde4",
+        "android_client_info": {
+          "package_name": "my.alejandromcruz.notesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712401282029-6i626ki8r0e09ugifssgb2rifq1jhftf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfAg-6-rU9P1Y7SlrmBoKjbcMc1r70F_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712401282029-6i626ki8r0e09ugifssgb2rifq1jhftf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
